@@ -1,6 +1,11 @@
+import ItemCount from "./ItemCount"
+
 function ItemListContainer({greeting}) {
   return (
-    <div class={"bg-info-content"}>{greeting}</div>
+    <>
+      <div>{greeting}</div>
+      <ItemCount stock="5" initial="1"/>
+    </>
   )
 }
 export default ItemListContainer
