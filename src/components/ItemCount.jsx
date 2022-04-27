@@ -22,20 +22,10 @@ const ItemCount = ({stock,initial}) =>{
   }
 
   return (
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">
-          Shoes!
-          <div class="badge badge-secondary">NEW</div>
-        </h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end items-center">
-          <button class="badge badge-outline h-8" onClick={onRemove}><img src="https://i.ibb.co/WBrQ2KM/minus.png" alt="-"/></button> 
-          <kbd class="kbd text-black bg-white">{count}</kbd>
-          <button class="badge badge-outline h-8" onClick={onAdd}><img src="https://i.ibb.co/jJF3bmj/plus.png" alt="+"/></button>
-        </div>
-      </div>
+    <div className="card-actions justify-end items-center">
+      <button className="badge badge-outline h-8" onClick={onRemove}><img src="https://i.ibb.co/WBrQ2KM/minus.png" alt="-"/></button> 
+      <kbd className="kbd text-black bg-white">{count}</kbd>
+      <button className="badge badge-outline h-8" onClick={onAdd}><img src="https://i.ibb.co/jJF3bmj/plus.png" alt="+"/></button>
     </div>
   )
 }

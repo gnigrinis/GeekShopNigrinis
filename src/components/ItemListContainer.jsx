@@ -1,10 +1,10 @@
-import ItemCount from "./ItemCount"
+import ItemList from "./ItemList"
 
 function ItemListContainer({greeting}) {
   return (
     <>
       <div>{greeting}</div>
-      <ItemCount stock="5" initial="1"/>
+      <ItemList/>
     </>
   )
 }
