@@ -1,11 +1,11 @@
 import { useState } from "react"
 
-const ItemCount = ({stock,initial}) =>{
+const ItemCount = ({stock,initial, onAdd}) =>{
   stock=parseInt(stock)
   initial=parseInt(initial)
   const [count, setCount] = useState(initial)
 
-  const onAdd = () => {
+  const incrementar = () => {
     if (count < stock){
       setCount(count + 1)
     }else{
@@ -13,7 +13,7 @@ const ItemCount = ({stock,initial}) =>{
     }
   }
 
-  const onRemove = () => {
+  const decrementar = () => {
     if(count > 1){
       setCount(count - 1)
     }else{
@@ -22,10 +22,11 @@ const ItemCount = ({stock,initial}) =>{
   }
 
   return (
-    <div className="card-actions justify-end items-center">
-      <button className="badge badge-outline h-8" onClick={onRemove}><img src="https://i.ibb.co/WBrQ2KM/minus.png" alt="-"/></button> 
+    <div className="card-actions justify-center items-center">
+      <button className="badge badge-outline h-8" onClick={decrementar}><img src="https://i.ibb.co/WBrQ2KM/minus.png" alt="-"/></button> 
       <kbd className="kbd text-black bg-white">{count}</kbd>
-      <button className="badge badge-outline h-8" onClick={onAdd}><img src="https://i.ibb.co/jJF3bmj/plus.png" alt="+"/></button>
+      <button className="badge badge-outline h-8" onClick={incrementar}><img src="https://i.ibb.co/jJF3bmj/plus.png" alt="+"/></button>
+      <button className="h-8 btn btn-primary" onClick={() => onAdd(count)}> Buy</button>
     </div>
   )
 }

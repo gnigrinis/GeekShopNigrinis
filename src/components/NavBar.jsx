@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom"
 import CartWidget from "./CartWidget"
 
 const navBar = () => {
   return (
+  <div className="App"> 
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Geek Shop</a>
+        <Link className="btn btn-ghost normal-case text-xl" to={"/"}>Geek Shop</Link>
       </div>
       <div className="flex-none">
         <CartWidget/>
@@ -27,6 +29,7 @@ const navBar = () => {
         </div>
       </div>
     </div>
+  </div>
   )
 }
 
