@@ -22,12 +22,17 @@ const ItemCount = ({stock,initial, onAdd}) =>{
   }
 
   return (
-    <div className="card-actions justify-center items-center">
-      <button className="badge badge-outline h-8" onClick={decrementar}><img src="https://i.ibb.co/WBrQ2KM/minus.png" alt="-"/></button> 
-      <kbd className="kbd text-black bg-white">{count}</kbd>
-      <button className="badge badge-outline h-8" onClick={incrementar}><img src="https://i.ibb.co/jJF3bmj/plus.png" alt="+"/></button>
-      <button className="h-8 btn btn-primary" onClick={() => onAdd(count)}> Buy</button>
-    </div>
+    <>
+      <div className="card-actions items-center">
+        <button className="badge badge-outline h-8" onClick={decrementar}><img src="https://i.ibb.co/WBrQ2KM/minus.png" alt="-"/></button> 
+        <kbd className="kbd text-black bg-white">{count}</kbd>
+        <button className="badge badge-outline h-8" onClick={incrementar}><img src="https://i.ibb.co/jJF3bmj/plus.png" alt="+"/></button>
+        <button className="h-8 btn btn-primary" onClick={() => onAdd(count)}> Buy</button>  
+      </div>
+      <div>
+        <spam className="font-bold mar">Stock:</spam><kbd className="kbd text-black bg-white m-1">{stock}</kbd>
+      </div>
+    </>
   )
 }
 export default ItemCount
