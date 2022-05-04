@@ -1,14 +1,17 @@
 import Item from './Item'
 import { itemsData } from '../data/itemsData'
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 const ItemList = () => {
+
+  const {categoryId} = useParams()
   
   const [items, setItems] = useState([])
   
   useEffect(() => {
     getItems()
-  }, [])
+  }, [categoryId])
 
   const getItems = () => { 
     const getItemsPromise = new Promise((resolve) => {
@@ -17,7 +20,7 @@ const ItemList = () => {
       }, 2000)
     })
     getItemsPromise.then(data => {
-      setItems(data)
+      (categoryId !== undefined)? setItems(data.filter(data => data.categoryId == categoryId)) : setItems(data)
     })
   }
 

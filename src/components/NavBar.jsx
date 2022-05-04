@@ -8,6 +8,11 @@ const navBar = () => {
       <div className="flex-1">
         <Link className="btn btn-ghost normal-case text-xl" to={"/"}>Geek Shop</Link>
       </div>
+      <div>
+        <Link className="btn btn-ghost normal-case text-xl" to={`/category/videoCards`}>Video Cards</Link>
+        <Link className="btn btn-ghost normal-case text-xl" to={`/category/mouse`}>Mouse</Link>
+        <Link className="btn btn-ghost normal-case text-xl" to={`/category/cases`}>Cases</Link>
+      </div>
       <div className="flex-none">
         <CartWidget/>
         <div className="dropdown dropdown-end">
@@ -20,7 +25,7 @@ const navBar = () => {
             <li>
               <article className="justify-between">
                 Profile
-                <span className="badge">New</span>
+                <p className="badge">New</p>
               </article>
             </li>
             <li><a>Settings</a></li>

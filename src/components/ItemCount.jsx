@@ -30,7 +30,7 @@ const ItemCount = ({stock,initial, onAdd}) =>{
         <button className="h-8 btn btn-primary" onClick={() => onAdd(count)}> Buy</button>  
       </div>
       <div>
-        <spam className="font-bold mar">Stock:</spam><kbd className="kbd text-black bg-white m-1">{stock}</kbd>
+        <p className="font-bold mar">Stock:</p><kbd className="kbd text-black bg-white m-1">{stock}</kbd>
       </div>
     </>
   )

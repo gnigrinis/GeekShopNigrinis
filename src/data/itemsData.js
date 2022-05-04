@@ -4,7 +4,8 @@ export const itemsData = [
     title: 'Nvida gtx 1060',
     description: 'Video card nvida gtx 1060. With 8GB of memory, you can play all the games...',
     price: '$399.99',
-    pictureUrl: 'https://i.ibb.co/BswyYSJ/Nvidia-GTX1060.png'
+    pictureUrl: 'https://i.ibb.co/BswyYSJ/Nvidia-GTX1060.png',
+    categoryId: 'videoCards',
   },
 
   {
@@ -12,7 +13,8 @@ export const itemsData = [
     title: 'Amd rx 1070',
     description: 'Video card amd rx 1070. With 8GB of memory, you can play all the games...',
     price: '$299.99',
-    pictureUrl: 'https://i.ibb.co/stwVbTT/Amd-RX1070.png'
+    pictureUrl: 'https://i.ibb.co/stwVbTT/Amd-RX1070.png',
+    categoryId: 'videoCards'
   },
   
   {
@@ -20,7 +22,8 @@ export const itemsData = [
     title: 'Mouse Gaming',
     description: 'Mouse with RGB. With RGB, compatible with all the games...',
     price: '$24.99',
-    pictureUrl: 'https://i.ibb.co/P5kVDg5/Mouse-Gaming.png'
+    pictureUrl: 'https://i.ibb.co/P5kVDg5/Mouse-Gaming.png',
+    categoryId: 'mouse'
   },
 
   {
@@ -28,7 +31,8 @@ export const itemsData = [
     title: 'Devastator GC550',
     description: 'The devastator has room for six fans, two mechanical and two solid disks; it has seven slots',
     price: '$39.75',
-    pictureUrl: 'https://i.ibb.co/VT4gHDZ/Devastator-GC550.png'
+    pictureUrl: 'https://i.ibb.co/VT4gHDZ/Devastator-GC550.png',
+    categoryId: 'cases'
   },
 
   {
@@ -36,6 +40,7 @@ export const itemsData = [
     title: 'Tailgate GC702',
     description: 'Designed for pc lovers who want a stylish chassis. Beautifully constructed with...',
     price: '$66.50',
-    pictureUrl: 'https://i.ibb.co/wp5tTxW/Tailgate-GC702.png'
+    pictureUrl: 'https://i.ibb.co/wp5tTxW/Tailgate-GC702.png',
+    categoryId: 'cases'
   },
 ]
