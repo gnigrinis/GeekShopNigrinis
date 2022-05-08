@@ -27,7 +27,7 @@ const ItemCount = ({stock,initial, onAdd}) =>{
         <button className="badge badge-outline h-8" onClick={decrementar}><img src="https://i.ibb.co/WBrQ2KM/minus.png" alt="-"/></button> 
         <kbd className="kbd text-black bg-white">{count}</kbd>
         <button className="badge badge-outline h-8" onClick={incrementar}><img src="https://i.ibb.co/jJF3bmj/plus.png" alt="+"/></button>
-        <button className="h-8 btn btn-primary" onClick={() => onAdd(count)}> Buy</button>  
+        <button className="h-8 btn btn-primary" onClick={() => onAdd(count)}> Add to cart</button>  
       </div>
       <div>
         <p className="font-bold mar">Stock:</p><kbd className="kbd text-black bg-white m-1">{stock}</kbd>

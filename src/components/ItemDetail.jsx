@@ -1,9 +1,14 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount"
 
 const ItemDetail = ({item}) => {
-  const {description, price, title, pictureUrl} = item
+  const {description, price, title, pictureUrl, stock} = item
+
+  const [cond, setCond] = useState(false)
 
   const onAdd = (cantidad) => { 
+    setCond(true)
     console.log(cantidad)
   };
 
@@ -15,7 +20,9 @@ const ItemDetail = ({item}) => {
         <figure><img className="h-96" src={pictureUrl} alt={title}/></figure>
         <div className="card-actions justify-center self-center items-center flex-col">
           <p className="text-xl self-center font-bold">{price} </p>
-          <ItemCount stock="5" initial="1" onAdd={onAdd}/>
+          {cond ? 
+          <Link to="/cart" className="h-8 btn btn-primary"> Buy</Link> :
+          <ItemCount stock={stock} initial={0} onAdd={onAdd}/>}
         </div>
       </div>
     </div> 
