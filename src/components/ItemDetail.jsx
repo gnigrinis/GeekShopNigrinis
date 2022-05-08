@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount"
 
 const ItemDetail = ({item}) => {
-  const {description, price, title, pictureUrl, stock} = item
+  const {description, price, title, pictureUrl, stock, id} = item
 
   const [cond, setCond] = useState(false)
 
@@ -22,7 +22,7 @@ const ItemDetail = ({item}) => {
           <p className="text-xl self-center font-bold">{price} </p>
           {cond ? 
           <Link to="/cart" className="h-8 btn btn-primary"> Buy</Link> :
-          <ItemCount stock={stock} initial={0} onAdd={onAdd}/>}
+          <ItemCount stock={stock} initial={0} onAdd={onAdd} id={id}/>}
         </div>
       </div>
     </div> 

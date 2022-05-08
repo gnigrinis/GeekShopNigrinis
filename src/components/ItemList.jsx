@@ -3,7 +3,7 @@ import { itemsData } from '../data/itemsData'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-const ItemList = () => {
+export const ItemList = () => {
 
   const {categoryId} = useParams()
   
