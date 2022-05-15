@@ -22,7 +22,7 @@ const ItemDetail = ({item}) => {
           <p className="text-xl self-center font-bold">{price} </p>
           {cond ? 
           <Link to="/cart" className="h-8 btn btn-primary"> Buy</Link> :
-          <ItemCount stock={stock} initial={0} onAdd={onAdd} id={id}/>}
+          <ItemCount stock={stock} initial={1} onAdd={onAdd} id={id}/>}
         </div>
       </div>
     </div> 

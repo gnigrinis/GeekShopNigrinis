@@ -3,7 +3,7 @@ import ItemList from "./ItemList"
 function ItemListContainer({greeting}) {
   return (
     <>
-      <div>{greeting}</div>
+      <h1>{greeting}</h1>
       <ItemList/>
     </>
   )

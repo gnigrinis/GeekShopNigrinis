@@ -17,7 +17,7 @@ export const ItemList = () => {
     const getItemsPromise = new Promise((resolve) => {
       setTimeout(() => {
         resolve(itemsData)
-      }, 2000)
+      }, 0)
     })
     getItemsPromise.then(data => {
       (categoryId !== undefined)? setItems(data.filter(data => data.categoryId == categoryId)) : setItems(data)
@@ -25,7 +25,7 @@ export const ItemList = () => {
   }
 
   return (
-    <div className="flex flex-wrap gap-8">
+    <div className="flex flex-row flex-wrap gap-8">
       {items.map( data => <Item key={data.id} item={data}/>)}
     </div>
   )
