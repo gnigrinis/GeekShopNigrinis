@@ -19,7 +19,7 @@ const ItemDetail = ({item}) => {
         <p className="self-center">{description}</p>
         <figure><img className="h-96" src={pictureUrl} alt={title}/></figure>
         <div className="card-actions justify-center self-center items-center flex-col">
-          <p className="text-xl self-center font-bold">{price} </p>
+          <p className="text-xl self-center font-bold">${price} </p>
           {cond ? 
           <Link to="/cart" className="h-8 btn btn-primary"> Buy</Link> :
           <ItemCount stock={stock} initial={1} onAdd={onAdd} id={id}/>}

@@ -5,6 +5,7 @@ import CartWidget from "./CartWidget"
 const NavBar = () => {
   const {cart} = useCartContext();
   let  quantity = cart.reduce((acc, item) => acc + item.quantity, 0);
+  let price = cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
   
 
   return (
@@ -19,7 +20,7 @@ const NavBar = () => {
         <Link className="btn btn-ghost normal-case text-xl" to={`/category/cases`}>Cases</Link>
       </div>
       <div className="flex-none">
-        {(cart.length==0)? undefined :<CartWidget quantity={quantity} />}
+        {(cart.length==0)? undefined :<CartWidget quantity={quantity} price={price} />}
         <div className="dropdown dropdown-end">
           <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">

@@ -6,7 +6,7 @@ const CardList = ({item}) => {
   const {addToCart, deleteFromCart, deleteCart, setCart} = useCartContext();
 
   return (
-    <div className="card flex-row w-4/6 bg-base-100 shadow-xl items-center">
+    <div className="card flex-row w-4/6 mb-2 p-5 bg-base-100 shadow-xl items-center">
       <figure><img className="w-32" src={pictureUrl} alt={title}/></figure>
       <div className="card-body">
         <h2 className="card-title justify-center">
