@@ -14,7 +14,6 @@ const Cart = () => {
       items: cart.map(item => ({id: item.id, title: item.title, price: item.price})),
       total: total
     }
-    console.log("user", user);
     
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
