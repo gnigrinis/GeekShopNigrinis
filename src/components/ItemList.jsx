@@ -1,5 +1,4 @@
 import Item from './Item'
-// import { itemsData } from '../data/itemsData'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { collection, getDocs, getFirestore } from "firebase/firestore";
@@ -11,21 +10,6 @@ export const ItemList = () => {
   
   const [items, setItems] = useState([])
   
-  // useEffect(() => {
-  //   getItems()
-  // }, [categoryId])
-
-  // const getItems = () => { 
-  //   const getItemsPromise = new Promise((resolve) => {
-  //     setTimeout(() => {
-  //       resolve(itemsData)
-  //     }, 0)
-  //   })
-  //   getItemsPromise.then(data => {
-  //     (categoryId !== undefined)? setItems(data.filter(data => data.categoryId == categoryId)) : setItems(data)
-  //   })
-  // }
-
   useEffect(() => {
     const db = getFirestore()
     const itemsCollection = collection(db, "items");
