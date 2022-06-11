@@ -62,10 +62,14 @@ const Cart = () => {
                 return errors;
               }}
               onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
                   setBuyer(values)
-                  setSubmitting(true)
-                }, 0);
+                  setSubmitting(false)
+                  const MySwal = withReactContent(Swal)
+                  MySwal.fire({
+                    didOpen: () => {
+                      MySwal.fire(<p> Your address was saved.</p>)
+                    }
+                  })
               }}
             >
               {({ isSubmitting }) => (
@@ -79,10 +83,11 @@ const Cart = () => {
                   <label htmlFor="email">Email</label>                  
                   <Field type="email" name="email" />
                   <ErrorMessage name="email" component="div" />
-                  <button type="submit" disabled={isSubmitting} onClick={checkout} className="h-8 btn btn-primary"> Checkout</button>
+                  <button type="submit" disabled={isSubmitting} className="h-8 btn btn-secondary"> Assign address</button>
                 </Form>
               )}
             </Formik>
+            <button onClick={checkout} className="h-8 btn btn-primary"> Checkout</button>
           </div>
         </>
         }

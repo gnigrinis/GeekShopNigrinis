@@ -1,3 +1,8 @@
+# REACT31160 - Geek Shop
+
+Este proyecto es la entrega finale del curso ReactJS de Coder House. Busca ser una tienda de hardware la cual aplica todo el conocimiento que se ha aprendido en el curso por lo cual es funcional hasta la creación de una orden de compra en firestore.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
